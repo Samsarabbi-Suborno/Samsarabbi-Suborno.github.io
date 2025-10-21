@@ -285,6 +285,7 @@ section {
     padding: 1rem;
     background-color: var(--dark-bg);
     border-radius: 10px;
+    flex-direction: column;
 }
 
 .info-item i {
