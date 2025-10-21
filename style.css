@@ -591,3 +591,117 @@ section {
         flex-direction: column;
     }
 }
+
+/* Add to your styles.css file */
+
+/* Resume Download Section */
+.resume-download {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
+    padding: 3rem 0;
+}
+
+.resume-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--light-bg);
+    padding: 2rem 3rem;
+    border-radius: 15px;
+    border: 2px solid rgba(99, 102, 241, 0.3);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.resume-icon {
+    font-size: 4rem;
+    color: var(--primary-color);
+}
+
+.resume-icon i {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.resume-content {
+    flex: 1;
+    min-width: 250px;
+}
+
+.resume-content h3 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.resume-content p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+.download-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+}
+
+.download-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(99, 102, 241, 0.6);
+}
+
+.download-button i {
+    font-size: 1.2rem;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-5px);
+    }
+    60% {
+        transform: translateY(-3px);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .resume-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 1.5rem;
+    }
+
+    .resume-icon {
+        font-size: 3rem;
+    }
+
+    .resume-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .download-button {
+        width: 100%;
+        justify-content: center;
+    }
+}
